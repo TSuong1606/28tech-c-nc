@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+using namespace std;
+
+int main() 
+{ fast;
+    int n;
+    cin>>n;
+    multiset<int> ms;
+    for(int i=0; i<n; ++i) {
+      int x; cin>>x;
+      ms.insert(x);
+    }
+    int q;
+    cin>>q;
+    while (q--) {
+      int t,x;
+      cin>>t>>x;
+      if (t==1) ms.insert(x);
+      if (t==2) {
+        auto it = ms.find(x);
+        if( it != ms.end()) ms.erase(it); //
+      }
+      if (t==3) {
+        auto it = ms.find(x); 
+        if ( it != ms.end()) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+      }
+    }
+    
+    return 0;
+}
