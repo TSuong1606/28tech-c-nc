@@ -30,3 +30,67 @@ int main()
     
     return 0;
 }
+ /* DYNAMIC SET: THÊM/XÓA/TRUY VẤN
+
+- DẤU HIỆU:  liên tục thay đổi dữ liệu ( insert, erase)
+   + truy vấn nhanh: kt tồn tại, tìm ptu gần nhất, tìm min/max, đếm số <= x
+   + giá trị trùng nhau -> multiset/multimap
+
+- BẢN CHẤT: duy trì cấu trúc thay đổi liên tục nhưng có thể trl ? immediately
+
+- CTDL PHÙ HỢP: multiset,set,map, 
+  nâng cao (CHƯA HỌC): fenwick tree/ segment tree dạng <= x
+
+- THAO TÁC:
+multiset<int> ms;
+// insert
+ms.insert(x);
+// delete 1 occurrence
+auto it = ms.find(x);
+if (it != ms.end()) ms.erase(it);
+// query exists
+(ms.find(x) != ms.end())
+
+- BÀI CÙNG PATTERN:
++ kt tồn tại ptu
++ lower_bound, upper_bound
++ tìm min/max động
++ đếm ptu <=x (fenwick tree)
+
+- LỖI HAY SAI: + erase(x) xóa tất cả -> iterator xóa 1
++ ko kt it == ms.end() -> bị lỗi
++ quên xử lí nhiều bản sao có cùng gtri
+
+Dữ liệu thay đổi → phải dùng cấu trúc hỗ trợ thao tác O(log N).
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
